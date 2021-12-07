@@ -1,13 +1,11 @@
 ##to send live time data thru HTML text area, Can be seen in the serial monitor of Arduino.
 
 
-
-
 <!DOCTYPE HTML>
 
 <html>
+   
    <head>
-      let textt;
    </head>
    
 <body>
@@ -15,8 +13,7 @@
 
     Address:<br>
     <textarea id="myTextarea">
-    342 Alvin Road
-    Ducksburg</textarea>
+    </textarea>
 <!-- 
     <p>Click the button to alert the contents of the text area.</p> -->
 
@@ -24,13 +21,17 @@
 
     <p id="demo"></p>
         <!-- var x; -->
+
+        
+
     <script>
+
+let textt;
     function myFunction() {
         var x = document.getElementById("myTextarea").value;
-    textt = document.getElementById("demo").innerHTML = x;
+        textt = document.getElementById("demo").innerHTML = x;
     }
     </script>
-
 
       <script type = "text/javascript">
         function WebSocketTest() {
@@ -55,11 +56,11 @@
                  alert("Message is received...");
               };
                
-            //   ws.onclose = function() { 
+              ws.onclose = function() { 
                  
-            //      // websocket is closed.
-            //      alert("Connection is closed..."); 
-            //   };
+                 // websocket is closed.
+                 alert("Connection is closed..."); 
+              };
            } 
            
            else {
